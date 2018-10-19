@@ -1,0 +1,9 @@
+Formulaire pour une nouvelle dose
+<%= simple_form_for [@cocktail,@dose] do |f| %>
+
+  <%= f.input :description %>
+  <%= f.association :ingredient %>
+  <%= f.submit "Add a dose", class: "btn btn-primary" %>
+<% end %>
+
+<%= link_to "Retour à '#{@cocktail.name}'", cocktail_path(@cocktail) %>

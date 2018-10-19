@@ -1,0 +1,7 @@
+Formulaire pour ajouter un cocktail
+<%= simple_form_for @cocktail do |f| %>
+  <%= f.input :name %>
+  <%= f.submit "Add a cocktail", class: "btn btn-primary" %>
+<% end %>
+
+<%= link_to "Retour à la liste des cocktails", cocktails_path(@cocktail) %>
